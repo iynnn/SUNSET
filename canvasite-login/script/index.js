@@ -58,11 +58,18 @@ async function getForm(event) {
     .getElementById("exampleInputPassword1")
     .value.trim();
   const message = document.getElementById("message");
+  message.innerHTML = "";
 
   // Cek jika username atau password kosong
   if (username === "" || password === "") {
-    message.innerHTML = `<p>Username dan Password tidak boleh kosong</p>`;
-    message.setAttribute("class", "text-danger");
+    // message.innerHTML = `<p>Username dan Password tidak boleh kosong</p>`;
+    // message.setAttribute("class", "text-danger");
+    const alert = `
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Error!</strong> Username dan Password tidak boleh kosong.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>`;
+    message.innerHTML = alert;
   } else {
     const hashPass = await hashPassword(password); // Hash password yang dimasukkan
 
@@ -70,11 +77,34 @@ async function getForm(event) {
     if (authenticate(username, hashPass)) {
       message.innerHTML = `<p>Login berhasil!</p>`;
       message.setAttribute("class", "text-success");
-      window.location.href =
-        "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746"; // Redirect ke Google
+
+      // Tampilkan modal
+      const warningModal = new bootstrap.Modal(
+        document.getElementById("warningModal")
+      );
+      warningModal.show();
+
+      // Tambahkan event listener untuk tombol "Proceed"
+      document.getElementById("proceedButton").addEventListener("click", () => {
+        window.location.href =
+          "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746";
+      });
+
+      // window.location.href =
+      // "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746"; // Redirect ke Google
     } else {
-      message.innerHTML = `<p>Username atau Password salah</p>`;
-      message.setAttribute("class", "text-danger");
+      // message.innerHTML = `<p>Username atau Password salah</p>`;
+      // message.setAttribute("class", "text-danger");
+      const alert = `
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Error!</strong> Username dan Password salah.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`;
+      message.innerHTML = alert;
+      // message.innerHTML = ""; // Kosongkan message jika ada
+      // const toastEl = document.getElementById("errorToast");
+      // const toast = new bootstrap.Toast(toastEl);
+      // toast.show(); // Tampilkan toast
     }
   }
 }
