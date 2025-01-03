@@ -91,16 +91,14 @@
                 </div>
               </div>
             </div>
-            <div class="container w-100 text-center fs-6">
-              <marquee
-                ><p>
-                  ‼️Info Jika setelah berhasil login dan browser menganggap
-                  sebagai link danger, maka bisa klik "Details" lalu klik
-                  <u><i>only visit this unsafe site</i> </u> yang berada di
-                  bawah halaman setelah klik details! Have a Nice Sunset 🌇 and
-                  Terima Kasih 🍵 Jangan bagikan link canva ke siapapun!!!
-                </p></marquee
-              >
+            <div class="container w-100 text-center fs-6 text-muted p-0">
+              <p>
+                Made with 🍵 © 2024
+                <a href="https://github.com/iynnn" class="text-muted">
+                  <u><i>iynnn</i></u></a
+                >
+                <br />Have a Nice Sunset 🌇
+              </p>
             </div>
           </div>
         </div>
@@ -135,6 +133,66 @@
         <button onclick="getForm(event)" class="btn btn-primary">Submit</button>
       </form>
     </div> -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="warningModal"
+      tabindex="-1"
+      aria-labelledby="warningModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title" id="warningModalLabel">
+              Login Success - Harap Perhatikan!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">
+                Jika nanti browser menanggap link berbaya <i>(phising)</i>, maka
+                klik
+                <b>Details</b>
+                <img
+                  src="./img/dangersite.png"
+                  alt="Dangersite"
+                  class="w-100"
+                />
+              </li>
+              <li class="list-group-item">
+                Selanjutnya klik <i>only visit this unsafe site</i> di paling
+                bawah sendiri
+                <img
+                  src="./img/dangersite2.png"
+                  alt="Dangersite2"
+                  class="w-100"
+                />
+              </li>
+              <li class="list-group-item">
+                <b> Jangan bagikan link canva ke siapapun! Terima kasih ☺️</b>
+              </li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="proceedButton"
+              class="btn btn-success px-4"
+            >
+              Lanjutkan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script/index.js"></script>
   </body>
