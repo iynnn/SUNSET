@@ -15,17 +15,22 @@ const users = [
     username: "user1",
     password:
       "ea756c5b20177d48a1ccf72f67e5d42b0cd7bb6bad1a6fa73f55a2a0dc2fd63b",
-  }, //ipds7310
+  },
   {
     username: "user2",
     password:
       "3d6138ee3eb348f1e55abf9215ab9ffafab5864b1092d48042132d8ec4cd0d07",
-  }, // bps7310
+  },
   {
     username: "admin",
     password:
       "a59c04ca3ccdee0b2dbdf790bca2c794e8a3880901d04aadb87a4c5701e6f389",
-  }, //bpsKabupatenBarru
+  },
+  {
+    username: "tugupayung",
+    password:
+      "40e3eb01708e918af39ba6e4b5e5d797434a657da9c80e65f3b7dccfcdb8fc82",
+  },
 ];
 
 // Fungsi untuk melakukan autentikasi
@@ -65,7 +70,8 @@ async function getForm(event) {
     if (authenticate(username, hashPass)) {
       message.innerHTML = `<p>Login berhasil!</p>`;
       message.setAttribute("class", "text-success");
-      window.location.href = "https://sunset7310.my.canva.site/"; // Redirect ke Google
+      window.location.href =
+        "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746"; // Redirect ke Google
     } else {
       message.innerHTML = `<p>Username atau Password salah</p>`;
       message.setAttribute("class", "text-danger");
