@@ -87,8 +87,9 @@ async function getForm(event) {
       // Tambahkan event listener untuk tombol "Proceed"
       document.getElementById("proceedButton").addEventListener("click", () => {
         window.location.href =
-          "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746";
-      });
+          // "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746";
+          "https://kiss-cinematic.my.canva.site/fgdfgfgfhtydsdfdsgsjetuetjsterhrthjrhsnsjdjdvbfjdvbdifjvbidfvbdifjvbdiufvgdiufhasdjaskjdvbdjkvgiufhasjkdbasjdhbvuferuhjkfjshdbjhbdjbivbeuibrthrsjdtjdtyjtdsrteryrthrtjhsdfgfghdjuutyjtjdshsrjdgjgjfjsrtrtaehtjusadrhjsjs"; 
+          });
 
       // window.location.href =
       // "https://sunset7310.my.canva.site/ffg2ghegy364882jehdnbdbh4uyxuk4euy2hs4jeg2uy6487zydjkehggdhx4djh4kyu234y6o9kjejsjh3j4hxj783u62377t4hjrvxnvdhejd4rkludryefgfwsh56575tdbcvcnbj9u8776ghgjjopp0098cccvcvfddgrgkkhjhdgrjdghdegrh362746"; // Redirect ke Google
@@ -110,3 +111,4 @@ async function getForm(event) {
 }
 // Menambahkan event listener untuk button
 document.getElementById("loginButton").addEventListener("click", getForm);
+
